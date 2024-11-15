@@ -10,6 +10,8 @@
             background-image: url("/img/image.png");
             background-position: center center;
             background-size: cover;
+            width: 100%;
+            height: 1200px;
         }
 
         .container {

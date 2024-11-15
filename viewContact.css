@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+a {
+    color: blue;
+    text-decoration: underline;
+}
+
+.contact-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    background-color: #f9e8d4;
+    border-radius: 10px;
+    padding: 20px;
+    width: 18rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.contact-card h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.contact-card p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.contact-card .profile-pic {
+    width: 50px;
+    height: 50px;
+    background-color: #ff6f61;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #d3d3d3;
+    width: 100px;
+    height: 50px;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b0b0b0;
+}
