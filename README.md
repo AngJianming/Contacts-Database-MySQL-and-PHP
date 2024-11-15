@@ -1,6 +1,6 @@
 # Contacts-Database-MySQL-and-PHP
 
-Contacts Database is just a way to manage your personal or professional contacts with a Responsive and Professional User Interface
+Contacts Database is just a way to manage your personal or professional contacts with a Responsive and Professional User Interface even if your a beginner in programming this is one of the best ways you can start tracking or automating your first program using PHP and MySQL.
 
 ## Table of Contents
 
