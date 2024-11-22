@@ -1,15 +1,17 @@
 <?php
-    if(isset($_GET['id'])){
-        include("conn.php");
-        $id = intval($_GET['id']);
-        $result = mysqli_query($con, "SELECT * FROM contacts WHERE id=$id");
-        $row = mysqli_fetch_array($result);
+if (isset($_GET['id'])) {
+    include("conn.php");
+    $id = intval($_GET['id']);
+    $result = mysqli_query($con, "SELECT * FROM contacts WHERE id=$id");
+    $row = mysqli_fetch_array($result);
+} else {
+    echo "<script>alert('Please choose contacts to edit');window.location.href='viewContact.php;'</script>";
+}
 
-    }
-    else {
-        echo "<script>alert('Please choose contacts to edit');window.location.href='viewContact.php;'</script>";
-    }
+include('session.php');
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +22,7 @@
     <title>Edit Contact</title>
     <style>
         body {
-            background-image: url("/img/image.png");
+            background-image: url("/img/bg.png");
             background-position: center center;
             background-size: cover;
         }
@@ -111,54 +113,47 @@
 
             Gender<br>
             <input type="radio" name="contact_gender" value="male" required
-            <?php
-                if ($row['contace_gender']=="Male"){
+                <?php
+                if ($row['contace_gender'] == "Male") {
                     echo 'checked';
                 }
-            ?>
-            >Male
+                ?>>Male
             <input type="radio" name="contact_gender" value="female" required
-            <?php
-                if ($row['contace_gender']=="Male"){
+                <?php
+                if ($row['contace_gender'] == "Male") {
                     echo 'checked';
                 }
-            ?>
-
-            >Female<br><br>
+                ?>>Female<br><br>
 
             Relationship<br>
             <select name="contact_relationship">
                 <option value="">Please select</option>
                 <option value="Family"
-                <?php
-                    if ($row['contact_relationship']=="Family"){
+                    <?php
+                    if ($row['contact_relationship'] == "Family") {
                         echo 'checked';
                     }
-                ?>
-                >Family</option>
+                    ?>>Family</option>
                 <option value="Friend"
-                <?php
-                    if ($row['contact_relationship']=="Friend"){
+                    <?php
+                    if ($row['contact_relationship'] == "Friend") {
                         echo 'checked';
                     }
-                ?>
-                >Friend</option>
-                
+                    ?>>Friend</option>
+
                 <option value="Colleague"
-                <?php
-                    if ($row['contact_relationship']=="Colleague"){
+                    <?php
+                    if ($row['contact_relationship'] == "Colleague") {
                         echo 'checked';
                     }
-                ?>
-                >Colleague</option>
-                
+                    ?>>Colleague</option>
+
                 <option value="Other"
-                <?php
-                    if ($row['contact_relationship']=="Other"){
+                    <?php
+                    if ($row['contact_relationship'] == "Other") {
                         echo 'checked';
                     }
-                ?>
-                >Other</option>
+                    ?>>Other</option>
             </select><br>
 
             Date of Birth<br>

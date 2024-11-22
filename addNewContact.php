@@ -7,7 +7,7 @@
     <title>My Address Book</title>
     <style>
         body {
-            background-image: url("/img/image.png");
+            background-image: url("/img/bg.png");
             background-position: center center;
             background-size: cover;
             width: 100%;
@@ -120,6 +120,9 @@
         </form>
 
         <?php
+
+        include('session.php');
+
         if (isset($_POST['submitBtn'])) {
             include("conn.php");
             $sql = "INSERT INTO contacts (contact_name, contact_phone, contact_email,

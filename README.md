@@ -128,4 +128,20 @@ the addNewContact.php page.
 ![Code](/img/5.png)
 
 ## Contribution
+
 Lemme know if there is any problem with this, feel free to fork this repo and contribute any known bug that you found in this repo :)
+
+### Updates:
+
+1) In phpMyAdmin MySQL myaddressbook database, added a new table users
+
+![Table in Database](/img/databaseUsers.png)
+
+2) Added `edit.php`, `update.php`, `login.php`, and `session.php`
+
+3) Made minor adjustments with 
+```php
+<?php
+include("session.php");
+?>
+```
