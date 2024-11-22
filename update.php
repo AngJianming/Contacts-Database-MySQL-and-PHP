@@ -1,4 +1,5 @@
 <?php
+include("session.php");
 if (isset($_POST['id'])) {
     include("conn.php");
 
